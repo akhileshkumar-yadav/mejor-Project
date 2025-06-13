@@ -1,0 +1,74 @@
+<% layout('/layouts/boilerplate') %>
+  <div class="row">
+    <div class="col-8 offset-2 border-card">
+      <h1 class="ms-lg-5 me-lg-5 mt-3">Create New Listing</h1>
+      
+      <form class="ms-lg-5 me-lg-5 needs-validation" enctype="multipart/form-data" novalidate method="post" action="/listings">
+
+        <!-- Title -->
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" name="listing[title]" class="form-control" placeholder="Enter Title" required>
+          <div class="valid-feedback">Looks Good!</div>
+        </div>
+
+        <!-- Description -->
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea name="listing[description]" class="form-control" placeholder="Enter Description" required></textarea>
+          <div class="invalid-feedback">Please enter a valid description!</div>
+        </div>
+
+        <div class="row mb-3">
+          <!-- Price -->
+          <div class="col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" name="listing[price]" class="form-control" placeholder="Enter Price" required>
+            <div class="invalid-feedback">Please enter a valid price!</div>
+          </div>
+
+          <!-- Country -->
+          <div class="col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" name="listing[country]" class="form-control" placeholder="Enter Country" required>
+            <div class="invalid-feedback">Please enter a valid country!</div>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input type="text" name="listing[location]" class="form-control" placeholder="Enter Location" required>
+          <div class="invalid-feedback">Please enter a valid location!</div>
+        </div>
+
+        <!-- Category Dropdown -->
+        <div class="mb-3">
+          <label for="category" class="form-label">Category</label>
+          <select class="form-select" name="listing[category]" id="category" required>
+            <option disabled selected value="">-- Select a Category --</option>
+            <option value="mountain">Mountain</option>
+            <option value="room">Room</option>
+            <option value="trandinhg">Trending</option>
+            <option value="pool">Pool</option>
+            <option value="farm">Farm</option>
+            <option value="camping ">Camping </option>
+            <option value="arctic">Arctic </option>
+            <option value="historicalHomes">Historical Homes</option>
+            <option value="lakefront">Lakefront </option>
+          </select>
+          <div class="invalid-feedback">Please select a category!</div>
+        </div>
+
+        <!-- Image Upload -->
+        <div class="mb-3">
+          <label for="imageUrl" class="form-label">Upload Listing Image</label>
+          <input type="file" name="listing[imageUrl]" class="form-control">
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn btn-dark add-btn">Create</button>
+
+      </form>
+    </div>
+  </div>
