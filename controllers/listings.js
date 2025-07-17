@@ -12,13 +12,13 @@ module.exports.index = async (req, res) => {
       filter.category = category;
     }
 
-    console.log("📥 Filter category from query:", category);
-    console.log("🔍 Final MongoDB filter object:", filter);
+    console.log(" Filter category from query:", category);
+    console.log(" Final MongoDB filter object:", filter);
 
     let allListings = await Listing.find(filter);
     res.render("listings/index.ejs", { listings: allListings });
   } catch (err) {
-    console.error("❌ Error fetching listings:", err);
+    console.error(" Error fetching listings:", err);
     res.status(500).send("Internal Server Error");
   }
 };

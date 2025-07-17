@@ -23,5 +23,5 @@ el.style.color = 'red';
 new mapboxgl.Marker({ element: el })
   .setLngLat(parsedCoordinates)
   .setPopup(new mapboxgl.Popup({ offset: 25, className: 'my-class' })
-    .setHTML(`<h3>Akhilesh kumar</h3><p>Exact Location provided after booking</p>`))
+    .setHTML(`<p3>Exact Location provided after booking</p3>`))
   .addTo(map);
